@@ -13,7 +13,7 @@ spec:
   template:
     metadata:
       labels:
-        app: demo-app
+        app: irctc-prod
     spec:
       containers:
       - name: demo-container
