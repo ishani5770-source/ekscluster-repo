@@ -9,15 +9,15 @@ spec:
     type: RollingUpdate
   selector:
     matchLabels:
-      app: irctc-prod
+      app: demo
   template:
     metadata:
       labels:
-        app: irctc-prod
+        app: demo
     spec:
       containers:
       - name: demo-container
-        image: 762989750451.dkr.ecr.us-east-1.amazonaws.com/eks-repos:latest
-        imagePullPolicy: Always
+        image:  CHANGE-IMAGE-NAME
+        imagePullPolicy: 
         ports:
         - containerPort: 80
