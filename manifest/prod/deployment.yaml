@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: demo-container
-        image: 762989750451.dkr.ecr.us-east-1.amazonaws.com/eks-repo
+        image: 762989750451.dkr.ecr.us-east-1.amazonaws.com/eks-repos:latest
         imagePullPolicy:
         ports:
         - containerPort: 80
