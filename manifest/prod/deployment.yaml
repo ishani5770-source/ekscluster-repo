@@ -13,11 +13,11 @@ spec:
   template:
     metadata:
       labels:
-        app: irctc-prod
+        app: demo-app
     spec:
       containers:
       - name: demo-container
         image: 762989750451.dkr.ecr.us-east-1.amazonaws.com/eks-repos:latest
-        imagePullPolicy:
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
