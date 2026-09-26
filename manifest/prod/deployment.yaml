@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: irctc-prod
+  name: demo-deployment
   namespace: demo
 spec:
   replicas: 1
@@ -9,7 +9,7 @@ spec:
     type: RollingUpdate
   selector:
     matchLabels:
-      app: demo-app
+      app: irctc-prod
   template:
     metadata:
       labels:
