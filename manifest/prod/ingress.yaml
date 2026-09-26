@@ -4,9 +4,12 @@ metadata:
   name: demo-ingress
   namespace: demo
   annotations:
-    kubernetes.io/ingress.class: alb
+    # Specifies that the ALB should be public-facing
     alb.ingress.kubernetes.io/scheme: internet-facing
+    # Tells AWS to route traffic directly to pod IPs (EKS best practice)
+    alb.ingress.kubernetes.io/target-type: ip
 spec:
+  ingressClassName: alb # CRITICAL: This replaces the deprecated annotation
   rules:
     - http:
         paths:
